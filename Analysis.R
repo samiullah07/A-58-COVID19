@@ -31,6 +31,7 @@ df2 <- subset(df,
 # below code shows Number of countries
 cat("Number of countries used:", nrow(df2), "\n")
 
+
 ## --- Member 2:Zia Ul Mustafa added this code "Histograms to check distributions" 
 
 ## 3. Histograms to check distributions
@@ -47,9 +48,6 @@ hist(df2$confirmed,
      ylab = "Number of countries",
      col  = "lightgreen")
 
-
-
-
 ## --- Member 3: Now we will do Correlation test  ---
 # (Member 3 will add their code here later)
 
@@ -57,7 +55,6 @@ hist(df2$confirmed,
 
 ## --- Member 4: Scatterplot with regression line  ---
 # (Member 4 will add their code here later)
-
 
 plot(df2$obesity, df2$confirmed,
      xlab = "Obesity (% of adult population)",
@@ -67,7 +64,36 @@ plot(df2$obesity, df2$confirmed,
 abline(lm(df2$confirmed ~ df2$obesity), col = "red")
 
 ## --- Member 5: Saved plots as PNG ---
-# (Member 5 will add their code here later)
+
+#Saved plots as PNG (for the report) 
+
+# Scatterplot
+png("scatter_obesity_confirmed.png")
+plot(df2$obesity, df2$confirmed,
+     xlab = "Obesity (% of adult population)",
+     ylab = "Confirmed COVID-19 cases (% of population)",
+     main = "Scatterplot of Obesity vs Confirmed COVID-19 Cases")
+abline(lm(df2$confirmed ~ df2$obesity), col = "red")
+dev.off()
+
+# Histogram of the obesity
+png("hist_obesity.png")
+hist(df2$obesity,
+     main = "Histogram of Obesity (%)",
+     xlab = "Obesity (% of adult population)",
+     ylab = "Number of countries",
+     col  = "lightblue")
+dev.off()
+
+# Histogram of the confirmed
+png("hist_confirmed.png")
+hist(df2$confirmed,
+     main = "Histogram of Confirmed COVID-19 Cases (%)",
+     xlab = "Confirmed cases (% of population)",
+     ylab = "Number of countries",
+     col  = "lightgreen")
+dev.off()
+
 
 
 
