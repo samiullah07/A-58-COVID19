@@ -33,6 +33,19 @@ cat("Number of countries used:", nrow(df2), "\n")
 
 ## --- Member 2: Histograms to check distributions ---
 # (Member 2 will add their code here later)
+## 3. Histograms to check distributions
+
+hist(df2$obesity,
+     main = "Histogram of Obesity (%)",
+     xlab = "Obesity (% of adult population)",
+     ylab = "Number of countries",
+     col  = "lightblue")
+
+hist(df2$confirmed,
+     main = "Histogram of Confirmed COVID-19 Cases (%)",
+     xlab = "Confirmed cases (% of population)",
+     ylab = "Number of countries",
+     col  = "lightgreen")
 
 
 
