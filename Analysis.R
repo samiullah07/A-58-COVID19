@@ -2,6 +2,7 @@
 # Confirmed COVID-19 cases (% of population)
 #Member 1 Abdul Basit Khan Load packages, import data, clean dataset
 
+library(readr)
 # 1. Loaded the dataset
 
 diet_data <- read_csv("Food_Supply_Quantity_kg_Data.csv")
@@ -45,10 +46,16 @@ cat("Number of countries used:", nrow(df2), "\n")
 
 
 
-## --- Member 5: Saved plots as PNG ---
-# (Member 5 will add their code here later)
 
 
+## 5. Scatterplot with regression line - SAMI ULLAH ADDED THIS CODE
+
+plot(df2$obesity, df2$confirmed,
+     xlab = "Obesity (% of adult population)",
+     ylab = "Confirmed COVID-19 cases (% of population)",
+     main = "Scatterplot of Obesity vs Confirmed COVID-19 Cases")
+
+abline(lm(df2$confirmed ~ df2$obesity), col = "red")
 
 
 
