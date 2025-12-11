@@ -31,21 +31,8 @@ df2 <- subset(df,
 # below code shows Number of countries
 cat("Number of countries used:", nrow(df2), "\n")
 
-## --- Member 2:Zia ul Mustafa Histograms to check distributions ---
-
-## 3. Histograms to check distributions
-
-hist(df2$obesity,
-     main = "Histogram of Obesity (%)",
-     xlab = "Obesity (% of adult population)",
-     ylab = "Number of countries",
-     col  = "lightblue")
-
-hist(df2$confirmed,
-     main = "Histogram of Confirmed COVID-19 Cases (%)",
-     xlab = "Confirmed cases (% of population)",
-     ylab = "Number of countries",
-     col  = "lightgreen")
+## --- Member 2: Histograms to check distributions ---
+# (Member 2 will add their code here later)
 
 
 
@@ -58,17 +45,17 @@ hist(df2$confirmed,
 # (Member 4 will add their code here later)
 
 
-
-
-
-## 5. Scatterplot with regression line - SAMI ULLAH ADDED THIS CODE
-
 plot(df2$obesity, df2$confirmed,
      xlab = "Obesity (% of adult population)",
      ylab = "Confirmed COVID-19 cases (% of population)",
      main = "Scatterplot of Obesity vs Confirmed COVID-19 Cases")
 
 abline(lm(df2$confirmed ~ df2$obesity), col = "red")
+
+## --- Member 5: Saved plots as PNG ---
+# (Member 5 will add their code here later)
+
+
 
 
 
