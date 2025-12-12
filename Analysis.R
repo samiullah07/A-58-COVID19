@@ -23,13 +23,13 @@ df$confirmed <- as.numeric(df$confirmed)
 # 2. Now Cleanning the data
 
 # Removing the unrealistic values and missing values 
-df2 <- subset(df,
-              !is.na(obesity)   &
-              !is.na(confirmed) &
-              obesity   > 0  & obesity   < 60 &
-              confirmed >= 0 & confirmed < 30)
-# below code shows Number of countries
-cat("Number of countries used:", nrow(df2), "\n")
+# df2 <- subset(df,
+#               !is.na(obesity)   &
+#               !is.na(confirmed) &
+#               obesity   > 0  & obesity   < 60 &
+#               confirmed >= 0 & confirmed < 30)
+# # below code shows Number of countries
+# cat("Number of countries used:", nrow(df2), "\n")
 
 
 # --- Member 2: Add Histogram
