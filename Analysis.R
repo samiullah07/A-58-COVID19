@@ -18,7 +18,7 @@ names(df)[which(names(df) == "Confirmed")] <- "confirmed"
 
 # converting to numeric to read as character 
 df$obesity   <- as.numeric(df$obesity)
-df$confirmed <- as.numeric(df$confirmed)
+# df$confirmed <- as.numeric(df$confirmed)
 
 # 2. Now Cleanning the data
 
